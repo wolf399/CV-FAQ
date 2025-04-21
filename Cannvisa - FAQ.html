@@ -1,98 +1,342 @@
 <!DOCTYPE html>
-<!-- saved from url=(0089)file:///C:/Users/Access/OneDrive/Desktop/css%20project/Master.css/Cannvisa%20-%20FAQ.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cannvisa - FAQ</title>
-    <link rel="stylesheet" href="./Cannvisa - FAQ_files/style.css"> <!-- We will create this later for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00897b;
+            --secondary-color: #00695c;
+            --accent-color: #4db6ac;
+            --light-bg: #f8f9fa;
+            --dark-text: #212529;
+            --light-text: #f8f9fa;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .faq-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--light-text);
+            padding: 2.5rem 1rem;
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
+        
+        .accordion-item {
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 8px !important;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 1.25rem;
+            background-color: white;
+            color: var(--dark-text);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            color: var(--primary-color);
+            background-color: rgba(0, 137, 123, 0.05);
+            box-shadow: none;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0, 0, 0, 0.125);
+        }
+        
+        .accordion-body {
+            padding: 1.5rem;
+            background-color: rgba(0, 137, 123, 0.03);
+        }
+        
+        footer {
+            background-color: white;
+            color: var(--dark-text);
+            padding: 3rem 0 1.5rem;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        footer h3, footer h5 {
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: var(--primary-color);
+        }
+        
+        footer h3 {
+            font-size: 1.5rem;
+        }
+        
+        footer h5 {
+            font-size: 1.1rem;
+        }
+        
+        footer ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        footer a {
+            color: var(--dark-text);
+            transition: color 0.3s ease;
+            text-decoration: none !important;
+        }
+        
+        footer a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-icons {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icons a {
+            color: var(--primary-color);
+            margin-right: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .faq-header {
+                font-size: 1.8rem;
+                padding: 1.5rem 1rem;
+            }
+            
+            .faq-container {
+                padding: 1.5rem;
+                margin: 0 1rem 2rem;
+            }
+            
+            footer .col-md-4, footer .col-md-2 {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <h1>Cannvisa - Frequently Asked Questions</h1>
-    </header>
-    <section id="faq-section" style="margin-bottom: 35px;">
-        <h2>Common Questions 
-            <style> </style>
-        </h2>
+    <div class="faq-header">
+        <div class="container">
+            <i class="fas fa-question-circle me-2"></i> Cannvisa FAQs
+        </div>
+    </div>
     
-        <details>
-            <summary>What is Cannvisa?</summary>
-            <p>Cannvisa is a prominent cannabis shop in Germany offering a wide selection of cannabis products, 
-                including seeds, vaporizers, oils, and accessories. 
-                The platform provides convenient shopping options, focusing on quality and variety. 
-                They also feature a knowledge center to educate customers on cannabis use and legal regulations, 
-                such as Germany's recent cannabis law changes.</p>
-        </details>
-    
-        <details open="">
-            <summary>What products do you offer?</summary>
-            <img src="./Cannvisa - FAQ_files/Screenshot 2025-02-06 214635.png" alt="products" style="
-    width: 500px;
-">
-            <p>Cannvisa offers a wide range of <b>cannabis and hemp-related products</b>.
-                 This includes cultivation equipment, packaging & preservation solutions, 
-                 and headshop items. Additionally, they provide a selection of CBD products,
-                  hemp-based food & beverages, as well as lifestyle, clothing, and cosmetic products.
-                   The platform helps customers find the perfect products to suit their needs.🌿✨
-
-            </p>
-        </details>
-    
-        <details>
-            <summary>Do you offer international shipping?</summary>
-            <p>Yes, we offer free delivery for orders over €70, including international shipping.</p>
-        </details>
-        <details>
-            <summary>contact us?</summary>
-            <p>Reach us out on <b>support@cannvisa.com </b></p>
-        </details>
-    </section>
-
-
-    <main>
-        <section id="faq-section" style="text-align: center;">
-            <!-- FAQ questions and answers will go here -->
-            <a href="https://cannvisa.com/de" target="_blank"><b style="text-decoration: none;
-            display: inline-block;
-            color: white; background-color: rgb(16 153 142);
-            border-radius: 8px;">Cannvisa</b>
-        </a>
-            <p>© 2025 Cannvisa. All Rights Reserved.</p>
+    <div class="container faq-container">
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        <i class="fas fa-cannabis me-2"></i> What is Cannvisa?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Cannvisa is a trusted provider of premium medical cannabis products, offering a carefully curated selection of oils, edibles, and therapeutic formulations. We combine pharmaceutical expertise with compassionate care to serve patients across Germany.
+                    </div>
+                </div>
+            </div>
             
-            <a href="https://cannvisa.com/de" target="_blank" class="btn">Home Page</a>
-            <a href="https://cannvisa.com/de/c/cbd" target="_blank" class="btn">Products</a>
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        <i class="fas fa-pills me-2"></i> What products do you offer?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our product range includes:
+                        <ul class="mt-2">
+                            <li>Medical-grade cannabis flowers</li>
+                            <li>THC/CBD oils and tinctures</li>
+                            <li>Edibles and capsules</li>
+                            <li>Topical creams and balms</li>
+                            <li>Vaporization products</li>
+                        </ul>
+                        All products are sourced from licensed producers and meet strict quality standards.
+                    </div>
+                </div>
+            </div>
             
-            <style>
-              .btn {
-                  display: inline-block;
-                  padding: 12px 20px;
-                  margin: 10px;
-                  font-size: 16px;
-                  font-weight: bold;
-                  text-decoration: none;
-                  color: white;
-                  background: linear-gradient(135deg, rgb(16 153 142)0, rgb(16 153 142));
-                  border: none;
-                  border-radius: 8px;
-                  transition: all 0.3s ease;
-                  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-              }
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        <i class="fas fa-globe-europe me-2"></i> Do you offer international shipping?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Currently, we primarily serve patients within Germany. For international orders, we can ship to certain EU countries where medical cannabis is legal. Please contact our support team with your location details for specific shipping information.
+                    </div>
+                </div>
+            </div>
             
-              .btn:hover {
-                  background: linear-gradient(135deg, rgb(16 153 142), rgb(16 153 142));
-                  transform: translateY(-2px);
-                  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
-              }
-            </style>
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        <i class="fas fa-shipping-fast me-2"></i> How does the ordering process work?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <div class="process-step mb-3">
+                            <h5 class="text-primary">1. Prescription Submission</h5>
+                            <p>Upload your valid medical cannabis prescription through our secure portal.</p>
+                        </div>
+                        
+                        <div class="process-step mb-3">
+                            <h5 class="text-primary">2. Pharmacy Processing</h5>
+                            <p>Our licensed partner pharmacy verifies your prescription and prepares your order within 24 hours.</p>
+                        </div>
+                        
+                        <div class="process-step mb-3">
+                            <h5 class="text-primary">3. DHL Shipping</h5>
+                            <p>Your package is shipped via DHL with temperature-controlled packaging when required.</p>
+                        </div>
+                        
+                        <div class="process-step mb-3">
+                            <h5 class="text-primary">4. Tracking & Delivery</h5>
+                            <p>You'll receive a tracking number for real-time updates. Delivery typically takes 2-3 business days within Germany.</p>
+                        </div>
+                        
+                        <div class="alert alert-info mt-3">
+                            <i class="fas fa-info-circle me-2"></i> Orders placed after 2pm or on weekends will be processed the next business day.
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        </section>
-    </main>
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        <i class="fas fa-credit-card me-2"></i> What payment methods do you accept?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="text-primary">Online Payments</h5>
+                                <ul>
+                                    <li><i class="fab fa-cc-visa me-2"></i> Visa</li>
+                                    <li><i class="fab fa-cc-mastercard me-2"></i> Mastercard</li>
+                                    <li><i class="fab fa-cc-amex me-2"></i> American Express</li>
+                                    <li><i class="fab fa-paypal me-2"></i> PayPal</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-primary">Other Options</h5>
+                                <ul>
+                                    <li><i class="fas fa-money-bill-wave me-2"></i> Bank Transfer</li>
+                                    <li><i class="fas fa-file-invoice me-2"></i> Invoice (for approved accounts)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="alert alert-warning mt-3">
+                            <i class="fas fa-exclamation-circle me-2"></i> For security reasons, we cannot accept cash payments for online orders.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- About Column -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3>cannvisa</h3>
+                    <p>Deutschlands vertrauenswürdige Quelle für medizinisches Cannabis. Wir verbinden pharmazeutische Expertise mit patientenzentrierter Betreuung.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>cannvisa</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Über uns</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Kontakt</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Blog</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Karriere</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Zahlungsmethoden</a></li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> PayPal & Kreditkarten</li>
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Versandoptionen</a></li>
+                        <li><i class="fas fa-truck text-info me-2"></i> DHL Express mit Tracking</li>
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Rückgabe & Umtausch</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div class="col-md-3">
+                    <h5>Rechtliches</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Datenschutz</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> AGB</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Impressum</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Widerrufsrecht</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right me-2"></i> Versandbedingungen</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright text-center">
+                <p class="mb-0">&copy; 2025 cannvisa GmbH. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
     
-    
-    
-
-
-</body></html>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
